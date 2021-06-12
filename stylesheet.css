@@ -1,4 +1,4 @@
-/***************** GENEREL CSS *****************/
+/***************** GENEREL CSS - MOBIL *****************/
 * {
     gap: 0;
     margin: 0;
@@ -15,16 +15,15 @@ img {
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-main {
+section {
     width: 100%;
-    height: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
+    height: calc(100vh - 140px);
 }
 
 li {
@@ -32,55 +31,33 @@ li {
     text-decoration: none;
 }
 
-li:hover {
-    box-shadow: 0px 1px 0 0px black inset, 0px -1px 0 0px black inset, -1px 0px 0 0px black inset, 1px 0px 0 0px black inset;
-}
-
 h1 {
     font-family: 'Roboto Condensed';
-    font-size: 4rem;
 }
 
 h2 {
-    font-weight: 500;
-    font-size: 3rem;
     font-family: 'Roboto Condensed';
 }
 
 h3 {
-    font-weight: 500;
-    font-size: 2rem;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 h4 {
-    font-size: 1.5rem;
-    font-weight: 500;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 h5 {
-    font-size: 1.1rem;
-    font-weight: 500;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 a {
-    font-size: 1rem;
     font-family: 'Roboto Condensed', sans-serif;
     text-decoration: none;
 }
 
 p {
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.6;
     font-family: 'Roboto Condensed', sans-serif;
-}
-
-.splashbillede_txt {
-    line-height: 2;
-    letter-spacing: 2rem;
 }
 
 .logo {
@@ -92,38 +69,38 @@ p {
     color: black;
 }
 
-nav p {
-    font-weight: 400;
+.forside_txt {  
+    line-height: 2;
+    letter-spacing: 2rem;
+    text-align: center;
 }
 
-/***************** HEADER MOBIL *****************/
+
+
+/***************** HEADER - MOBIL *****************/
 header {
-    color: black;
-    background-color: white;
     position: sticky;
-    top: 0;
     left: 0;
-    padding-left: 30px;
-    padding-right: 30px;
+    top: 0;
+    height: 70px;
+    width: 100%;
     padding-top: 20px;
-    padding-bottom: 20px;
-    letter-spacing: 3px;
+    background-color: white;
 }
 
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: black;
 }
 
 #menu {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    background-color:white;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center
@@ -190,21 +167,166 @@ header nav {
     transform: translateY(0) rotate(-45deg);
 }
 
-/***************** FORSIDE MOBIL *****************/
+/***************** FORSIDE - MOBIL *****************/
 
 .first_section_forside {
     display: grid;
-    background-color: red;
+    background-image: url(img/splashbillede.jpg);
     align-items: center;
-    text-align: center;
-    width: 100%;
-    height: calc(100vh - 10rem);
+    background-size: cover;
 }
 
 .second_section_forside {
-    background-color: blue;
-    width: 100%;
-    height: calc(100vh - 10rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-bottom: 70px;
 }
 
+.second_section_forside .section_wrapper_1 {
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100;
+    height: 100%;
+    background-color: #313131;
+    color: white;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.second_section_forside .section_wrapper_1 a{
+    color: white;
+}
+
+.second_section_forside .section_wrapper_1 a:hover{
+    color: black;
+}
+
+.second_section_forside .section_wrapper_2 {
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    align-items: center;
+}
+
+.second_section_forside .section_wrapper_2 img {
+    scale: 30%;
+}
+
+/***************** CONTACT - MOBIL *****************/
+
+
+/***************** FOOTER - MOBIL *****************/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    color: #696969;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer_hoejre {
+    text-align: right;
+}
+
+
+/***************** FOOTER - MOBIL *****************/
+
+@media(min-width: 975px) {
+
+    body {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+
+    /* HEADER */
+
+    header {
+    }
+    
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    #burger_knap {
+        display: none;
+    }
+    
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        flex-flow: row;
+        overflow-x: auto;        
+    }
+    
+    #menu {
+        position: relative;
+        display: flex;
+        height: 40px;
+        top: 0px;
+        background-color: transparent;
+        width: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        transition: none;
+        transform: translateX(0%);
+        gap: 40px;
+    }
+    
+    #menu a {
+        display: block;
+    }
+
+
+
+
+    /* Forside */
+    .second_section_forside {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    
+    .second_section_forside .section_wrapper_1 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    
+    .second_section_forside .section_wrapper_2 {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    footer {
+        padding-right: 30px;
+        padding-left: 30px;
+
+    }
+    
+    .footer_hoejre {
+        text-align: right;
+    }
+
+
+}
 
