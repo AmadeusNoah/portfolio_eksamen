@@ -213,6 +213,7 @@ header nav {
     align-items: center;
     justify-content: center;
     height: 100%; 
+    width: 100%;
     background-color: white;
     border: 2px black solid;
 }
@@ -223,15 +224,15 @@ header nav {
 
 /***************** ABOUT - MOBIL *****************/
 .first_section_about {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
     margin-bottom: 70px;
+    height: calc(100vh - 140px); 
 }
 
 .first_section_about .section_wrapper_1 {
     background-color: #313131;
     color: white;
+    height: 100%;
+    width: 100%;
 }
 
 .first_section_about .section_wrapper_1 a{
@@ -243,13 +244,11 @@ header nav {
 }
 
 .first_section_about .section_wrapper_2 {
-    display: grid;
-    grid-column: 1/2;
-    grid-row: 2/3;
-    width: 100%;
-    height: 100%;
     background-color: red;
     align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 70px;
 }
 
 /***************** PROJECTS - MOBIL *****************/
@@ -331,13 +330,98 @@ padding-bottom: 4rem;
 .fourth_section_projects  .section_wrapper_2 {
 
 }
-
-
-
-
-
+$   
 /***************** CONTACT - MOBIL *****************/
+.form_wrapper h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5;
+    padding-bottom: 1rem;
+}
 
+.form_wrapper p {
+    font-weight: 500;
+    padding-bottom: 3rem;
+    color: grey;
+    line-height: 1.8;
+}
+
+form textarea {
+    border: none;
+    resize: none;
+    border: 2px black solid;
+    width: 100%;
+    height: 14.5rem;
+}
+
+form input {
+    border: none;
+    border: 2px black solid;
+    width: 100%;
+    padding: 10px;
+    
+}
+
+button {
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    height: 40px;
+    border: none;
+    width: 80px;
+    cursor: pointer;
+}
+
+.submit_knap {
+    padding-top: 1.5rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+
+.form_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form_container_1{
+    display: grid;
+    gap: 2rem;
+}
+
+form {
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+
+/* FOOTER - MOBIL */
+footer {
+    position: fixed;
+    color: #696969;
+    font-size: 0.8rem;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    background-color: white;
+}
+
+.footer_hoejre {
+    text-align: right;
+}
 
 /***************** FOOTER - MOBIL *****************/
 
@@ -445,6 +529,8 @@ footer {
 
     /***************** ABOUT - DESKTOP *****************/
     .first_section_about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
     }
