@@ -197,7 +197,6 @@ header nav {
     align-content: center;
     justify-content: center;
     height: 100%;
-    border: 2px yellow solid;
 }
 
 .second_section_forside .section_wrapper_1 a{
@@ -215,7 +214,6 @@ header nav {
     height: 100%; 
     width: 100%;
     background-color: white;
-    border: 2px black solid;
 }
 
 .second_section_forside .section_wrapper_2 img {
@@ -229,7 +227,9 @@ header nav {
 }
 
 .first_section_about .section_wrapper_1 {
-    background-color: #313131;
+    background-image:url(img/about.jpg);
+    background-size: cover;
+    background-position: 100%;
     color: white;
     height: 100%;
     width: 100%;
@@ -244,7 +244,7 @@ header nav {
 }
 
 .first_section_about .section_wrapper_2 {
-    background-color: red;
+    padding-top: 2rem;
     align-items: center;
     height: 100%;
     width: 100%;
@@ -531,8 +531,8 @@ footer {
     .first_section_about {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
+        gap: 30px;
     }
     
     .first_section_about .section_wrapper_1 {
@@ -541,6 +541,25 @@ footer {
     }
     
     .first_section_about .section_wrapper_2 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+    }
+    .first_section_about .section_wrapper_2 .cv {
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .first_section_about .section_wrapper_2 .work_experience {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .first_section_about .section_wrapper_2 .education {
         grid-column: 2/3;
         grid-row: 1/2;
     }
@@ -552,6 +571,7 @@ footer {
         grid-template-rows: 1fr;
         height: calc(100vh - 140px); 
         padding-bottom: 0rem;
+        gap: 30px;
     }
     
     .first_section_projects .section_wrapper_1 {
@@ -560,15 +580,105 @@ footer {
         display: grid;
         grid-column: 1/2;
         grid-row: 1/2;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        padding-bottom: 0px;
     }
+
+    .first_section_projects .section_wrapper_1 .img1{
+        grid-column: 1/5;
+        grid-row: 1/4;
+        background-image: url(img/02_website.png);
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .first_section_projects .section_wrapper_1 .img2{
+        grid-column: 1/2;
+        grid-row: 4/5;
+        background-image:url(img/02_web_logo.png);
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .first_section_projects .section_wrapper_1 .img3{
+        background-image:url(img/02_nav.png);
+        background-size: cover;
+        grid-column: 2/3;
+        grid-row: 4/5;
+        width: 100%;
+        height: 100%;
+    }
+
+    .first_section_projects .section_wrapper_1 .img3 img{
+        object-fit: cover;
+        background-image: url(img/02_web_bjerge.png);
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .first_section_projects .section_wrapper_1 .img4{
+        background-image: url(img/02_web_bjerge.png);
+        background-size: cover;
+        grid-column: 3/4;
+        grid-row: 4/5;
+        width: 100%;
+        height: 100%;
+    }
+
+    .first_section_projects .section_wrapper_1 .img5{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column: 4/5;
+        grid-row: 4/5;
+        width: 100%;
+        height: 100%;
+    }
+
+    .farve1
+    {
+        background-color: #FEDBC7;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .farve2
+    {
+        background-color: #F75856;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .farve3
+    {
+        background-color: #FF5900;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .farve4{
+        background-color: #3E3A4B;
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+
+
     
     .first_section_projects .section_wrapper_2 {
         grid-column: 2/3;
         grid-row: 1/2;
-        max-width: 800px;
+        /* max-width: 800px; */
         display: grid;
         align-items: center;
         justify-content: center;
+        align-content: center;
     }
 
     .second_section_projects {
